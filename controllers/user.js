@@ -1,3 +1,7 @@
+// Name:Arvin Almario
+// Student Number: 301225269
+// Midterm exam
+
 let User = require('../models/user');
 let passport = require('passport');
 

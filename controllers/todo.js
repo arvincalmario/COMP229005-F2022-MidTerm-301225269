@@ -1,3 +1,7 @@
+// Name:Arvin Almario
+// Student Number: 301225269
+// Midterm exam
+
 // create a reference to the model
 let TodoModel = require('../models/todo');
 
@@ -45,7 +49,7 @@ module.exports.details = (req, res, next) => {
 }
 
 // Gets a todo by id and renders the Edit form using the add_edit.ejs template
-module.exports.displayEditPage = (req, res, next) => { //aalmario
+module.exports.displayEditPage = (req, res, next) => { //aalmario display edit page
     
     // ADD YOUR CODE HERE
     let id = req.params.id;
@@ -62,7 +66,7 @@ module.exports.displayEditPage = (req, res, next) => { //aalmario
             res.render('todo/add_edit', {
                 title: 'Edit list', 
                 todo: itemToEdit,
-                userName: req.user ? req.user.username : ''
+                userName: req.user ? req.user.username : '' //see sign in name in header
             })
         }
     });
@@ -70,7 +74,7 @@ module.exports.displayEditPage = (req, res, next) => { //aalmario
 }
 
 // Processes the data submitted from the Edit form to update a todo
-module.exports.processEditPage = (req, res, next) => { //aalmario
+module.exports.processEditPage = (req, res, next) => { //aalmario process edited value
 
     let id = req.params.id
     
@@ -102,7 +106,7 @@ module.exports.processEditPage = (req, res, next) => { //aalmario
 }
 
 // Deletes a todo based on its id.
-module.exports.performDelete = (req, res, next) => { //aalmario
+module.exports.performDelete = (req, res, next) => { //aalmario deletes row
 
     // ADD YOUR CODE HERE
     let id = req.params.id;
@@ -122,7 +126,7 @@ module.exports.performDelete = (req, res, next) => { //aalmario
 }
 
 // Renders the Add form using the add_edit.ejs template
-module.exports.displayAddPage = (req, res, next) => { //aalmario
+module.exports.displayAddPage = (req, res, next) => { //aalmario displays add page
     // ADD YOUR CODE HERE
     let newItem = TodoModel();
 
@@ -135,7 +139,7 @@ module.exports.displayAddPage = (req, res, next) => { //aalmario
 }
 
 // Processes the data submitted from the Add form to create a new todo
-module.exports.processAddPage = (req, res, next) => { //almario
+module.exports.processAddPage = (req, res, next) => { //almario process the added value
 
     console.log(req.body);
 
