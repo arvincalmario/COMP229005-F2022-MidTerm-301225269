@@ -1,2 +1,2 @@
-# COMP229005-F2022-MidTerm-301225269
- Midterm code for Web App Development
+# COMP229.F2022.Midterm.Template
+ COMP229 F2022 Midterm Template
